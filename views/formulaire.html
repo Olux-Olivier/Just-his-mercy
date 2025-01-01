@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            width: 40%;
+            margin: 0 auto; /* Centre le formulaire */
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                width: 80%; /* 80% sur mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h2>Votre temoignage !!</h2>
+            <form method="POST" action="">
+                <input type="hidden" name="user_id" value="12345"> <!-- ID de l'utilisateur -->
+
+                <div class="form-group">
+                    <label for="content">Contenu</label>
+                    <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Télécharger une image</label>
+                    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
